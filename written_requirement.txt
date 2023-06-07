@@ -1,0 +1,30 @@
+Assignment 4 Written Requirement Response
+
+Student Name(s): Dylan Dizon
+
+1. Describe two challenges that the format of the building file presented [4 marks]
+    Both of my challenges included the '|' and '\n' existing in the text file. For the orange dice, I was planning to make it where
+    it checks an andjacent dice around it. I couldn't do this with the '|' in the way of checking an adjacent dice,
+    or if '--' was right beside the dice, therefore I had to use .split('|') in order to get rid of it in the text file. 
+    The '\n' exisiting in the file caused a return of wrong calculations within the program, therefore I 
+    decided to use .strip('\n') to remove it
+    
+
+2. Briefly describe an alternative file format that would not pose the challenges you provided in Question 1 [2 marks]
+    An alternative format I would use would be to completely remove the '|' and the '\n' in the text file itself.
+    I can turn the text file into a format such as '--G3--S4W3--G5S3--', putting the highest level of the building at the beginning,
+    and the lowest at the very bottom
+    Therefore if it was normally in this format: 
+                    G6|--|--
+                    W4|--|--
+                    R3|G2|--
+                    W2|W1|--
+    I would change it to be:
+            G6----W4----R3G2--W2W1--
+
+
+3. Briefly describe a different challenge that your alternative file format would pose. [1 mark]
+    A different challenge that this alternative file format would pose would be that I have to split a row every 3 dices, and put it in a new list.
+    I would have to use a for loop to count up to the 3 dice spaces and append them into a new list, then append that list into the main list. 
+    This format might also be harder to read, though it will not cause the same issues that I have gone through
+
